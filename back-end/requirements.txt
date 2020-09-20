@@ -1,5 +1,6 @@
 attrs==20.2.0
 click==7.1.2
+dnspython==1.16.0
 Flask==1.1.2
 iniconfig==1.0.1
 itsdangerous==1.1.0
@@ -9,6 +10,7 @@ more-itertools==8.5.0
 packaging==20.4
 pluggy==0.13.1
 py==1.9.0
+pymongo==3.11.0
 pyparsing==2.4.7
 six==1.15.0
 toml==0.10.1
