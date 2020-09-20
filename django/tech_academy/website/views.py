@@ -7,4 +7,8 @@ def home_page(request):
 
 
 def login(request):
-    return HttpResponse('<h1>login</h1>')
+    return render(request, 'website/login.html')
+
+
+def register(request):
+    return render(request, 'website/register.html')

@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="en">
+
+  {% load static %}
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,7 +10,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <title>tech.academy - Home Page</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+
+    <title>tech.academy | welcome</title>
   </head>
 
   <body>
@@ -15,6 +21,7 @@
     <!-- Navbar: Barra de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
+        <img class="tech-logo" src="{% static 'website/imgs/dice-d6-solid.svg' %}">
         <a class="navbar-brand" href="#"><strong>tech.academy</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,11 +41,8 @@
               <a class="nav-link" href="#">suporte</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-md-0">
-            <input class="form-control form-control-sm" type="text" placeholder="busque por cursos" aria-label="Search">
-          </form>
-          <a class="nav-link" href="#" style="color:white">Sign in</a>
-          <button type="button" class="btn btn-outline-light">Sign up</button>
+          <a class="nav-link" href="login" style="color:white">Sign in</a>
+          <a href="signup" class="btn btn-outline-light">Sign Up</a>
         </div>
       </div>
     </nav>
