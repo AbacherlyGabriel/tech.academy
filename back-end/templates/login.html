@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+    {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'website/css/login.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+
+    <title>tech.academy | login</title>
+</head>
+<body>
+    <img class="wave" src="{% static 'website/imgs/wave.png' %}">
+
+    <div class="container">
+        <div class="img">
+            <img src="{% static 'website/imgs/book_lover.svg' %}">
+        </div>
+        <div class="login-content">
+            <form action="">
+                <img class="avatar" src="{% static 'website/imgs/female-avatar.svg' %}">
+                <h2>olá :)</h2>
+                <div class="input-div email">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h5>Email</h5>
+                        <input class="input" type="text">
+                    </div>
+                </div>
+                <div class="input-div senha">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5>Senha</h5>
+                        <input class="input" type="password">
+                    </div>
+                </div>
+                <a href="#">Esqueceu a senha?</a>
+                <input type="submit" class="btn" value="login">
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{% static 'website/js/main.js' %}"></script>
+</body>
+</html>

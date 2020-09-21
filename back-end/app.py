@@ -9,7 +9,7 @@ app.secret_key = secret
 
 @app.route('/')
 def home():
-    return '<h1>Home<h1>'
+    return render_template('index.html')
 
 
 @app.route('/login')
