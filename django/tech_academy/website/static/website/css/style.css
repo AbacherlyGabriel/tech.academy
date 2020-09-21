@@ -6,4 +6,17 @@ body {
 .tech-logo {
     height: 50px;
     padding: 10px;
+    margin-right: 5px;
+}
+
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    margin-left: 20px;
+}
+
+
+.btn {
+    margin-left: 15px;
 }
