@@ -13,21 +13,25 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/register')
+def registrar():
+    return render_template('register.html')
+
+
 @app.route('/login')
 def login():
-    return '<h1>Login</h1>'
+    return render_template('login.html')
 
 
 @app.route('/autenticar', methods=['POST'])
 def autenticar():
     session['usuario_logado'] = 'user'
-    return redirect('/login')
+    return redirect('/perfil')
 
 
-@app.route('/logout')
-def logout():
-    session['usuario_logado'] = None
-    return '<h1>Logout</h1>'
+@app.route('/perfil')
+def visualizar_perfil():
+    return render_template('profile.html')
 
 
-app.run()
+app.run(debug=True)
