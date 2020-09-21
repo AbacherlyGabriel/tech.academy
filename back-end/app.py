@@ -9,6 +9,7 @@ app.secret_key = secret
 
 @app.route('/')
 def home():
+    session['usuario_logado'] = None
     return render_template('index.html')
 
 
