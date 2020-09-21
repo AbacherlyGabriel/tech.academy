@@ -34,4 +34,9 @@ def visualizar_perfil():
     return render_template('profile.html')
 
 
+@app.route('/criar', methods=['POST'])
+def criar():
+    return redirect('/perfil')
+
+
 app.run(debug=True)
