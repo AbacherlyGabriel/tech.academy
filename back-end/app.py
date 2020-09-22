@@ -42,4 +42,4 @@ def criar():
     return redirect('/perfil')
 
 
-app.run()
+app.run(debug=True)

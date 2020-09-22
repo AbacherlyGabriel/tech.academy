@@ -1,7 +1,10 @@
+import os
+
 from pymongo import errors, MongoClient
 
+db_pass = os.environ.get('DBPASS')
 client = MongoClient(
-    "mongodb+srv://yanhkawakami:<password>@pisi2020.qelym.mongodb.net/")
+    f"mongodb+srv://yanhkawakami:{db_pass}@pisi2020.qelym.mongodb.net/")
 
 
 class UserDao:
