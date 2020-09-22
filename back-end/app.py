@@ -29,6 +29,7 @@ def autenticar():
         session['usuario_logado'] = user.nome
         return redirect('/perfil')
     else:
+        flash("Email ou senha incorretos")
         return redirect('/login')
 
 
