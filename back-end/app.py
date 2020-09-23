@@ -8,6 +8,7 @@ secret = secrets.token_urlsafe(32)
 app.secret_key = secret
 user = UserDao()
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -40,7 +41,12 @@ def visualizar_perfil():
 
 @app.route('/criar', methods=['POST'])
 def criar():
-    return redirect('/perfil')
+    if (user.create(request.form['email'], request.form['nome'], request.form['senha'], request.form['valida_senha'])):
+        session['usuario_logado'] = request.form['nome']
+        return redirect('/perfil')
+    else:
+        flash(user.message)
+        return redirect('/register')
 
 
 app.run(debug=True)
