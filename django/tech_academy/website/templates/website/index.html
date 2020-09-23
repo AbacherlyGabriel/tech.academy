@@ -1,56 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-  {% load static %}
+{% load static %}
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tech.academy</title>
+  <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<body>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
-
-    <title>tech.academy | welcome</title>
-  </head>
-
-  <body>
-
-    <!-- Navbar: Barra de Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <img class="tech-logo" src="{% static 'website/imgs/dice-d6-solid.svg' %}">
-        <a class="navbar-brand" href="#"><strong>tech.academy</strong></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarsExample07">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">explore</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">empresa</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">suporte</a>
-            </li>
-          </ul>
-          <a class="nav-link" href="login" style="color:white">sign in</a>
-          <a href="signup" class="btn btn-outline-light">sign Up</a>
-        </div>
-      </div>
+  <header>
+    <img class="logo" src="{% static 'website/imgs/power-off-solid.svg' %}" alt="tech.academy">
+    <h1 class="name">tech.academy</h1>
+    <nav>
+      <ul class="navlinks">
+        <li><a href="#">home</a></li>
+        <li><a href="#">explore</a></li>
+        <li><a href="#">quem somos</a></li>
+        <li><a href="#">suporte</a></li>
+        <li><a href="#">Sign in</a></li>
+      </ul>
     </nav>
+    <a href="#"><button>Sign up</button></a>
+  </header>
 
-    <!-- jQuery, Popper.js and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  </body>
-  
+
+  <div class="textoPrincipal">
+    <a class="textoNormal">avalie cursos e plataformas <br></br> de </a> <a class="negritoTitulo">varias formas</a>
+  </div>
+
+
+  <div class="busca">
+    <input placeholder="busque cursos, plataformas ou carreiras" type="text">
+  </div>
+
+  <div class="logosSlider">
+    <img class='logoAlura' src="{% static 'website/imgs/alura-logo.png' %}">
+    <img class='logoUdacity' src="{% static 'website/imgs/udacity-logo2.png' %}">
+    <img class='logoCoursera' src="{% static 'website/imgs/coursera-logo.png' %}">
+    <img class='logoHotmart' src="{% static 'website/imgs/hotmart-logo2.jpg' %}">
+    <img class='logoUdemy' src="{% static 'website/imgs/udemy-logo2.jpg' %}">
+    <img class='logoAlura' src="{% static 'website/imgs/alura-logo.png' %}">
+    <img class='logoUdacity' src="{% static 'website/imgs/udacity-logo2.png' %}">
+    <img class='logoCoursera' src="{% static 'website/imgs/coursera-logo.png' %}">
+    <img class='logoHotmart' src="{% static 'website/imgs/hotmart-logo2.jpg' %}">
+    <img class='logoUdemy' src="{% static 'website/imgs/udemy-logo2.jpg' %}">
+  </div>
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="{% static 'website/js/main.js' %}"></script>
+
+
+</body>
+
 </html>
