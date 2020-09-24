@@ -24,6 +24,12 @@ def login():
     return render_template('login.html')
 
 
+@app.route('/logout')
+def logout():
+    session['usuario_logado'] = None
+    return redirect('/')
+
+
 @app.route('/autenticar', methods=['POST'])
 def autenticar():
     if (user.read(request.form['email'], request.form['senha'])):
@@ -49,4 +55,4 @@ def criar():
         return redirect('/register')
 
 
-app.run(debug=True)
+app.run()

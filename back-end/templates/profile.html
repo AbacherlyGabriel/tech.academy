@@ -25,14 +25,14 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <img class="tech-logo" src="{{ url_for('static', filename='imgs/dice-d6-solid.svg') }}">
-        <a class="navbar-brand" href="#"><strong>tech.academy</strong></a>
+        <a class="navbar-brand" style="color:white"><strong>tech.academy</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample07">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">home<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="/">home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">explore</a>
@@ -52,8 +52,8 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
                   aria-labelledby="navbarDropdownMenuLink-55">
-                  <a class="dropdown-item" href="#">Meu Perfil</a>
-                  <a class="dropdown-item" href="#">Sair</a>
+                  <a class="dropdown-item" href="{{ url_for('visualizar_perfil') }}">Meu Perfil</a>
+                  <a class="dropdown-item" href="{{ url_for('logout') }}">Sair</a>
                 </div>
               </li>
             </ul>
@@ -65,7 +65,7 @@
   <div class="perfil">
     <div class="info-pessoal">
       <img class="perfil-avatar" src="{{ url_for('static', filename='imgs/male-avatar.svg') }}" alt="avatar">
-      <p class="perfil-info"><strong>nome-perfil</strong></p>
+      <p class="perfil-info"><strong>{{session.get('usuario_logado')}}</strong></p>
       <p class="perfil-info-classificacao">
         <i class="fas fa-graduation-cap"></i>
         <strong>rookie</strong> (50xp)
@@ -88,14 +88,14 @@
       <a href="#" class="btn-floating btn-lg btn-git" type="button" role="button"><i class="fab fa-github"></i></a>
 
       <button type="button" class="btn btn-dark">editar perfil</button>
-      <button type="button" class="btn btn-info">logout</button>
+      <a type="button" class="btn btn-info" href="{{ url_for('logout') }}">logout</a>
     </div>
 
     <div class="cursos">
       <div class="cursos-ativos">
         <p>
           <i class="fas fa-play"></i>
-            cursos <strong>ativos</strong>
+            cursos <strong>avaliados</strong>
         </p>
 
         <!--Cursos: Progresso -->

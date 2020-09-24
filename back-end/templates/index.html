@@ -18,15 +18,15 @@
     <!-- Navbar: Barra de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a href="/"><img class="tech-logo" src="{{ url_for('static', filename='imgs/dice-d6-solid.svg') }}"></a>
-        <a class="navbar-brand" href="/"><strong>tech.academy</strong></a>
+        <img class="tech-logo" src="{{ url_for('static', filename='imgs/dice-d6-solid.svg') }}">
+        <a class="navbar-brand" style="color:white"><strong>tech.academy</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample07">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">home<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="/">home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">explore</a>
@@ -47,8 +47,8 @@
                   </a>
                   <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
                     aria-labelledby="navbarDropdownMenuLink-55">
-                    <a class="dropdown-item" href="#">Meu Perfil</a>
-                    <a class="dropdown-item" href="#">Sair</a>
+                    <a class="dropdown-item" href="{{ url_for('visualizar_perfil') }}">Meu Perfil</a>
+                    <a class="dropdown-item" href="{{ url_for('logout') }}" >Sair</a>
                   </div>
                 </li>
             </ul>

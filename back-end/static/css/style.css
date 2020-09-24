@@ -3,6 +3,11 @@ body {
 }
 
 
+.navbar {
+    padding: 0;
+}
+
+
 .tech-logo {
     height: 50px;
     padding: 10px;
@@ -12,7 +17,7 @@ body {
 
 .nav-link {
     display: block;
-    padding: .5rem 1rem;
+    padding: 0;
     margin-left: 20px;
 }
 
