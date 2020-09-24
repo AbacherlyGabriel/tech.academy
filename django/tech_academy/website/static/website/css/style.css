@@ -8,13 +8,19 @@
   background-color: #611F4E;
 }
 
-
 h1, li, a, button {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 16px;
   color: #edf0f1;
   text-decoration: none;
+}
+
+.btn {
+  position: relative;
+  left: 1416px;
+  background-color: transparent;
+  bottom: 19px;
 }
 
 
@@ -26,6 +32,34 @@ header {
 
 }
 
+.collapse ul li {
+display: inline-block;
+    position: relative;
+    padding: 13px;
+    left: -363px;
+    bottom: -38px;
+}
+
+.nav-link {
+  position: relative;
+  left: 1384px;
+  bottom: 19px;
+}
+
+.navbar-brand {
+  position: relative;
+  top: 50px;
+  left: 87px;
+  margin-left: 7px;
+}
+
+.tech-logo {
+  height: 45px;
+  position: relative;
+  margin-left: 240px;
+  top: 64px;
+  left: 79px;
+}
 
 .logo {
   cursor: pointer;
@@ -41,31 +75,14 @@ header {
 }
 
 
-.navlinks {
-  list-style: none;
-}
-
-
-.navlinks li {
-  display: inline-block;
-  padding: 0px 20px;  
-}
-
-
-.navlinks li a {
-  transition: all 0.3s ease 0s;
-}
-
-
-.navlinks li a:hover {
-  color: #0088a9;
-}
-
-
-button {
-  margin-left: 30px;
+.navbar-toggler {
+  margin-left: 1049px;
   padding: 9px 25px;
+  height: 33px;
+  position: relative;
+  width: 83px;
   background-color: rgba(0, 136, 169, 1);
+  top: 62px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -121,13 +138,13 @@ button {
   height: 60px;
   width: 60px;
   background-color: transparent;
-  background-image: url("/static/website/imgs/rigthArrow.png");
+  background-image: url(/static/website/imgs/rigthArrow.png);
   background-size: 60px 60px;
   background-repeat: no-repeat;
   position: absolute;
   z-index: 9;
   top: 124px;
-  left: 1295px
+  left: 1338px;
 }
 
 .slick-prev {
@@ -136,13 +153,13 @@ button {
   height: 60px;
   width: 60px;
   background-color: transparent;
-  background-image: url("/static/website/imgs/rigthArrow.png");
+  background-image: url(/static/website/imgs/rigthArrow.png);
   background-size: 60px 60px;
   background-repeat: no-repeat;
   position: absolute;
   z-index: 9;
   top: 124px;
-  left: 431px;
+  left: 446px;
   transform: rotate(180deg);
 }
 
