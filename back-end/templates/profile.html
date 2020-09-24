@@ -65,7 +65,7 @@
   <div class="perfil">
     <div class="info-pessoal">
       <img class="perfil-avatar" src="{{ url_for('static', filename='imgs/male-avatar.svg') }}" alt="avatar">
-      <p class="perfil-info"><strong>{{session.get('usuario_logado')}}</strong></p>
+      <p class="perfil-info"><strong>@{{session.get('usuario_logado')}}</strong></p>
       <p class="perfil-info-classificacao">
         <i class="fas fa-graduation-cap"></i>
         <strong>rookie</strong> (50xp)
