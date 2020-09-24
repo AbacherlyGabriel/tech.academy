@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>tech.academy | minha conta</title>
+</head>
+<body>
+       <!-- Navbar: Barra de Navegação -->
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <img class="tech-logo" src="{{ url_for('static', filename='imgs/dice-d6-solid.svg') }}">
+          <a class="navbar-brand" href="#"><strong>tech.academy</strong></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">explore</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">empresa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">suporte</a>
+              </li>
+            </ul>
+            {% if session.get('usuario_logado') != None %}
+              <h1>Logout</h1>
+            {% else %}
+              <a class="nav-link" href="login" style="color:white">sign in</a>
+              <a href="register" class="btn btn-outline-light">sign Up</a>
+            {% endif %}
+          </div>
+        </div>
+      </nav>
+  
+      <!-- jQuery, Popper.js and Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

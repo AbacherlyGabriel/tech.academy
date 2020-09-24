@@ -1,0 +1,91 @@
+body {
+    background: #343a40!important;
+    margin:0px;
+    padding:0px;
+}
+
+
+.profile {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+section {
+    width:100%;
+    height:95vh;
+    background-image:url("../images/bg.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    position: relative;
+}
+
+
+.text-container p:nth-child(1) {
+    font-family: calibri;
+    font-weight:bold;
+    color:#6d6d6d;
+    font-size:22px;
+}
+
+
+   .text-container p:nth-child(2) {
+    font-family:calibri;
+    font-weight:bold;
+    letter-spacing:1px;
+    color:#1a1a1a;
+    font-size:60px;
+}
+
+
+.text-container p:nth-child(3) {
+    font-family: myriad pro regular;
+    color: #403e3e;
+    font-size:30px;
+    line-height:30px;
+}
+    
+
+.text-container p {
+    margin:45px 0px 25px;
+    line-height:0px;
+}
+
+
+.text-container button {
+    width:130px;
+    height:42px;
+    border-radius:10px;
+    font-family:calibri;
+    font-weight:bold;
+    font-size: 14px;
+    outline:none;
+    margin:0px 10px;
+}
+
+
+.text-container {
+    position: absolute;
+    left:13%;
+    top:42%;
+    transform:translate(-13%,-42%);
+}
+
+
+.hire-btn {
+    border:2px solid #373636;
+    color:#373636;
+    background-color:transparent;
+}
+
+
+.down-cv {
+    background-color:#0B0B0B;
+    color:#fff; 
+    border:none;
+}
+
+
+button:active {
+    transform:scale(1.1);
+}
