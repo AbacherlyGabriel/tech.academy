@@ -1,91 +1,145 @@
 body {
-    background: #343a40!important;
-    margin:0px;
-    padding:0px;
+    background: #ffffff;
 }
 
 
-.profile {
+.navbar {
+    padding: 0;
+}
+
+
+.perfil {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 
-section {
-    width:100%;
-    height:95vh;
-    background-image:url("../images/bg.png");
-    background-size:cover;
-    background-repeat:no-repeat;
-    position: relative;
+.perfil > div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+
+.cursos {
+    flex-direction: column;
 }
 
 
-.text-container p:nth-child(1) {
-    font-family: calibri;
-    font-weight:bold;
-    color:#6d6d6d;
-    font-size:22px;
+.info-pessoal {
+    height: 1000px;
+    width: 275px;
 }
 
 
-   .text-container p:nth-child(2) {
-    font-family:calibri;
-    font-weight:bold;
-    letter-spacing:1px;
-    color:#1a1a1a;
-    font-size:60px;
+.perfil-avatar {
+    border-radius: 50%;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
-.text-container p:nth-child(3) {
-    font-family: myriad pro regular;
-    color: #403e3e;
-    font-size:30px;
-    line-height:30px;
-}
-    
-
-.text-container p {
-    margin:45px 0px 25px;
-    line-height:0px;
+.perfil-info {
+    text-align: center;
+    font-size: 20px;
+    font-family: poppins;
+    padding: 10px;
 }
 
 
-.text-container button {
-    width:130px;
-    height:42px;
-    border-radius:10px;
-    font-family:calibri;
-    font-weight:bold;
-    font-size: 14px;
-    outline:none;
-    margin:0px 10px;
+.perfil-info-classificacao {
+    text-align: center;
+    font-size: 15px;
+    font-family: poppins;
+    padding: 0;
 }
 
 
-.text-container {
-    position: absolute;
-    left:13%;
-    top:42%;
-    transform:translate(-13%,-42%);
+.perfil-info-empresa {
+    text-align: center;
+    font-size: 15px;
+    font-family: poppins;
+    padding: 0; 
 }
 
 
-.hire-btn {
-    border:2px solid #373636;
-    color:#373636;
-    background-color:transparent;
+.perfil-info-bio {
+    text-align: center;
+    font-size: 15px;
+    font-family: poppins;
+    padding: 0; 
 }
 
 
-.down-cv {
-    background-color:#0B0B0B;
-    color:#fff; 
-    border:none;
+.perfil-editar {
+    border-radius: 12px;
+    font-size: 12px;
+    font-family: poppins;
+    transition-duration: 0.4s;
 }
 
 
-button:active {
-    transform:scale(1.1);
+.perfil-editar:hover {
+    background-color: #1b1a1a; /* Green */
+    color: white;
+}
+
+
+.perfil-logout {
+    border-radius: 12px;
+    font-size: 12px;
+    font-family: poppins;
+    transition-duration: 0.4s;
+}
+
+
+.perfil-logout:hover {
+    background-color: #1b1a1a; /* Green */
+    color: white;
+}
+
+
+.cursos {
+    height: 1000px;
+    width: 800px;
+}
+
+
+.cursos-ativos {
+    height: 50%;
+}
+
+
+.cursos-ativos-titulo {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-family: poppins;
+}
+
+
+.cursos-ativos-curso {
+    font-family: poppins;
+    font-size: 15px;
+}
+
+
+.cursos-ativos-pags {
+    display: flex;
+    justify-content: center;
+    margin-top: 210px;
+}
+
+
+.cursos-recomendados {
+    height: 50%;
+}
+
+
+.cursos-recomendados-building {
+    max-height:100%; 
+    max-width:100%;
 }
