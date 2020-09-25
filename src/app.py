@@ -53,6 +53,3 @@ def criar():
     else:
         flash(user.message)
         return redirect('/register')
-
-
-app.run()
