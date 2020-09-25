@@ -22,7 +22,6 @@ class UserDao:
             return True
         return False
 
-
     def create(self, email, user, password, valida_password):
         try:
             if (password != valida_password):
