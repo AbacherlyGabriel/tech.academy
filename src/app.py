@@ -27,6 +27,7 @@ def login():
 @app.route('/logout')
 def logout():
     session['usuario_logado'] = None
+    session.modified = True
     return redirect('/')
 
 
@@ -34,6 +35,7 @@ def logout():
 def autenticar():
     if (user.read(request.form['email'], request.form['senha'])):
         session['usuario_logado'] = user.nome
+        session.modified = True
         return redirect('/perfil')
     else:
         flash("Email ou senha incorretos")
