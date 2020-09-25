@@ -17,10 +17,11 @@ class UserDao:
     def read(self, email, password):
         query = {"_id": email, "pass": password}
         doc = self.col.find_one(query)
-        if (doc != None):
+        if (doc is not None):
             self.nome = doc['user']
             return True
         return False
+
 
     def create(self, email, user, password, valida_password):
         try:
@@ -29,12 +30,12 @@ class UserDao:
                 return False
             query = {"user": user}
             doc = self.col.find_one(query)
-            if (doc != None):
+            if (doc is not None):
                 self.message = "Nome de usuário em uso"
                 return False
             doc = {"_id": email, "user": user, "pass": password}
             self.col.insert_one(doc)
             return True
-        except errors.DuplicateKeyError as err:
+        except errors.DuplicateKeyError:
             self.message = "Email já cadastrado"
             return False
