@@ -20,8 +20,7 @@
     <title>tech.academy | about</title>
 </head>
 <body>
-  <div>
-    <!-- Navbar -->
+    <!-- Navbar: Barra de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <img class="tech-logo" src="{{ url_for('static', filename='imgs/dice-d6-solid.svg') }}">
@@ -32,29 +31,33 @@
         <div class="collapse navbar-collapse" id="navbarsExample07">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/">home<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">about</a>
             </li>
           </ul>
-          <ul class="navbar-nav ml-auto nav-flex-icons">
-              <li class="nav-item avatar dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  <img src="{{ url_for('static', filename='imgs/male-avatar.svg') }}" class="rounded-circle z-depth-0" alt="avatar image" style="height: 50px;">
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
-                  aria-labelledby="navbarDropdownMenuLink-55">
-                  <a class="dropdown-item" href="{{ url_for('visualizar_perfil') }}">Meu Perfil</a>
-                  <a class="dropdown-item" href="{{ url_for('logout') }}">Sair</a>
-                </div>
-              </li>
+          {% if session.get('usuario_logado') != None %}
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item avatar dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <img src="{{ url_for('static', filename='imgs/male-avatar.svg') }}" class="rounded-circle z-depth-0" alt="avatar image" style="height: 50px;">
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                    aria-labelledby="navbarDropdownMenuLink-55">
+                    <a class="dropdown-item" href="{{ url_for('visualizar_perfil') }}">Meu Perfil</a>
+                    <a class="dropdown-item" href="{{ url_for('logout') }}" >Sair</a>
+                  </div>
+                </li>
             </ul>
+          {% else %}
+            <a class="nav-link" href="login" style="color:white">sign in</a>
+            <a href="register" class="btn btn-outline-light">sign Up</a>
+          {% endif %}
         </div>
       </div>
     </nav>
-  </div>
 
   <!-- quem somos -->
   <div class="about-us" style="
