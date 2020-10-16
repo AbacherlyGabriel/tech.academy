@@ -10,6 +10,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="css/about.css">
 
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -19,7 +21,7 @@
 
     <title>tech.academy | about</title>
 </head>
-<body>
+<body style="position: relative; min-height: 100vh;">
     <!-- Navbar: Barra de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -61,12 +63,15 @@
 
   <!-- quem somos -->
   <div class="about-us" style="
-    width: 1100px;
-    /* display: flex; */
+    /* width: 1100px; */
+    display: flex;
     /* align-items: center; */
-    margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
     padding-top: 50px;">
     
+    <div class="container-about">
+
     <h1 style="text-align: center;">Quem Somos?</h1>
 
     <p style="padding-top: 20px;">Nos últimos anos têm crescido a demanda por cursos online. Plataformas como Udemy, Coursera, Alura, entre outras, disponibilizam cursos completos sobre diversos temas e das mais variadas áreas de conhecimento. No atual contexto de isolamento social, muitas dessas plataformas têm oferecido descontos em grande parte dos seus cursos, o que tem favorecido o consumidor. No entanto, a gama de opções de plataformas e cursos exige um filtro sobre qual é a melhor oferta. Dessa forma, nossa proposta é criar uma plataforma onde é possível listar, comparar e avaliar plataformas e cursos online de tecnologia, disponibilizando um filtro para que o usuário possa conhecer a reputação do curso que está considerando adquirir. Além disso, aproveitando o contexto de pandemia, onde muitos trabalhadores têm perdido seus empregos devido aos impactos econômicos da pandemia, negociaríamos com as plataformas um desconto aos usuários que comprovassem terem sido demitidos durante o período de crise atual, servindo como incentivo educacional e dando maiores oportunidades para o reingresso ao mercado de trabalho e estímulo à economia.</p>
@@ -100,12 +105,15 @@
 
     <p>Para essa entrega, implementamos o fluxo de login/cadastro de usuários na plataforma, ou seja, todo o processo que envolve, desde a criação das telas, até as validações no banco de dados e os testes de conexão e criação de novos registros, além das configurações de CI/CD.</p>
 
+    <br><br>
+
+  </div>
   </div>
 
   <footer class="page-footer font-small unique-color-dark pt-4">
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3" style="
-        position: fixed;
+        position: absolute;
         bottom: 0;
         left: 0;
         margin: auto;
