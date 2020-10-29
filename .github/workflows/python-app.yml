@@ -36,7 +36,7 @@ jobs:
       env:
         DBPASS: ${{ secrets.DBPASS }}
       run: |
-        DBPASS=$DBPASS pytest -vv --cov=src
+        PYTHONPATH=src DBPASS=$DBPASS pytest -vv --cov=src --cov-report term-missing
     - name: Deploy to Heroku
       env:
         HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
