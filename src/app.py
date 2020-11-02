@@ -57,9 +57,9 @@ def criar():
         return redirect('/register')
 
 
-@app.route('/buscar')
-def about():
-    return render_template('busca.html')
+#@app.route('/buscar')
+#def about():
+#    return render_template('busca.html')
 
 
 @app.route('/about')
