@@ -131,8 +131,8 @@
             </div>
 
             <div class="perfil-info">
-                <h1 class="nome">seu nome</h1>
-                <h1 class="nick">@seu-nome</h1>
+                <h1 class="nome">{{session.get('usuario_logado')}}</h1>
+                <h1 class="nick">@{{session.get('usuario_logado')}}</h1>
                 
                 <div class="bottom-line"></div>
 
