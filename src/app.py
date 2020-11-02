@@ -58,7 +58,7 @@ def criar():
 
 
 @app.route('/buscar')
-def about():
+def buscar():
     return render_template('busca.html')
 
 
