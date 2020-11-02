@@ -56,7 +56,7 @@
 
         <!-- Primeiro Container: Conteudo em Destaque -->
 
-        {% if session.get('usuario_logado') is None %}
+        {% if session.get('usuario_logado') == None %}
         <section class="container">
             <div class="container wrap column destaque-conteudo">
                 <div class="container destaque-texto">
