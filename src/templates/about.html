@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/busca.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
-    <link rel="stylesheet" href="css/about.css">
 
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -21,45 +18,44 @@
 
     <title>tech.academy | about</title>
 </head>
+
 <body style="position: relative; min-height: 100vh;">
-    <!-- Navbar: Barra de Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <img class="tech-logo" src="{{ url_for('static', filename='imgs/dice-d6-solid.svg') }}">
-        <a class="navbar-brand" style="color:white"><strong>tech.academy</strong></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarsExample07">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">about</a>
-            </li>
-          </ul>
-          {% if session.get('usuario_logado') != None %}
-            <ul class="navbar-nav ml-auto nav-flex-icons">
-                <li class="nav-item avatar dropdown">
-                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="{{ url_for('static', filename='imgs/male-avatar.svg') }}" class="rounded-circle z-depth-0" alt="avatar image" style="height: 50px;">
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
-                    aria-labelledby="navbarDropdownMenuLink-55">
-                    <a class="dropdown-item" href="{{ url_for('visualizar_perfil') }}">Meu Perfil</a>
-                    <a class="dropdown-item" href="{{ url_for('logout') }}" >Sair</a>
-                  </div>
-                </li>
-            </ul>
-          {% else %}
-            <a class="nav-link" href="login" style="color:white">sign in</a>
-            <a href="register" class="btn btn-outline-light">sign Up</a>
-          {% endif %}
+  <header>
+    <div class="container navbar">
+        <div class="logo">
+            <img class="logo-img" src="{{ url_for('static', filename='imgs/tech.logo2.svg') }}">
+            <h1 class="logo-texto">tech.academy</h1>
         </div>
-      </div>
-    </nav>
+
+        {% if session.get('usuario_logado') == None %}
+        <div class="sign">
+            <a class="signin" href="login">sign in</a>
+            <button class="signup" onclick="location.href='register'" type="button">sign up</button>
+        </div>
+
+        {% else %}
+        <div class="usuario-alertas">
+            <a href="#"><i class="far fa-comment-alt"></i></a>
+            <a href="#"><i class="fas fa-bell"></i></a>
+            
+            <div class="dropdown">
+                <button class="usuario-dropdown">
+                    {{session.get('usuario_logado')}}
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdown-links">
+                    <a href="perfil">meu perfil</a>
+                    <a href="#">configurações</a>
+                    <div class="dropdown-logout">
+                        <button class="signup" onclick="location.href='logout'" type="button">logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+    </div>
+  </header>
 
   <!-- quem somos -->
   <div class="about-us" style="
@@ -123,10 +119,5 @@
     </div>
     <!-- Copyright -->
   </footer>
-
-  <!-- jQuery, Popper.js and Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 </html>
