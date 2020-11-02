@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/busca.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/busca.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
@@ -22,10 +22,10 @@
     <header>
         <div class="container navbar">
             <div class="logo">
-                <a class="" href="index.html">
-                    <img class="logo-img" src="imgs/tech.logo2.svg">
+                <a class="" href="/">
+                    <img class="logo-img" src="{{ url_for('static', filename='imgs/tech.logo2.svg') }}">
                 </a>
-                <h1 class="logo-texto"><a href="index.html">tech.academy</a></h1>
+                <h1 class="logo-texto"><a href="/">tech.academy</a></h1>
             </div>
 
             <!-- Navbar: Usuário Logado -->
@@ -35,14 +35,14 @@
                 
                 <div class="dropdown">
                     <button class="usuario-dropdown">
-                        seu-nome
+                        {{session.get('usuario_logado')}}
                         <i class="fas fa-caret-down"></i>
                     </button>
                     <div class="dropdown-links">
-                        <a href="#">meu perfil</a>
+                        <a href="perfil">meu perfil</a>
                         <a href="#">configurações</a>
                         <div class="dropdown-logout">
-                            <button class="signup">logout</button>
+                            <button class="signup" onclick="location.href='logout'" type="button">logout</button>
                         </div>
                     </div>
                 </div>
@@ -194,7 +194,7 @@
         <div class="copyright">copyright &copy tech.academy, inc. all rights reserved</div>
     </footer>
 
-    <script src="js/profile.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
 </body>
 </html>
