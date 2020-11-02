@@ -21,6 +21,29 @@
                 <h1 class="logo-texto">tech.academy</h1>
             </div>
 
+            <!-- Navbar: Usuário Logado -->
+            {% if session.get('usuario_logado') != None %}
+            <div class="usuario-alertas">
+                <a href="#"><i class="far fa-comment-alt"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                
+                <div class="dropdown">
+                    <button class="usuario-dropdown">
+                        {{session.get('usuario_logado')}}
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-links">
+                        <a href="#">meu perfil</a>
+                        <a href="#">configurações</a>
+                        <div class="dropdown-logout">
+                            <button class="signup">logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navbar: Usuário Não Logado -->
+            {% else %}
             <div class="sign">
                 <a class="signin" href="#">sign in</a>
                 <button class="signup">sign up</button>
