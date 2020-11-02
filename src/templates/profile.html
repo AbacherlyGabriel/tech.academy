@@ -35,7 +35,7 @@
                 
                 <div class="dropdown">
                     <button class="usuario-dropdown">
-                        {{session.get('usuario_logado')}}
+                        {{ session.get('usuario_logado') }}
                         <i class="fas fa-caret-down"></i>
                     </button>
                     <div class="dropdown-links">
@@ -57,7 +57,7 @@
                 <!--
                 <img src="imgs/undraw_profile_pic_ic5t.svg" alt="avatar" class="avatar"> -->
 
-                <div class="avatar-abreviado">SN</div>
+                <div class="avatar-abreviado">{{ session.get('usuario_logado')[:1].upper() }}</div>
                 
                 <div class="editar-perfil">
                     <button class="editar-btn">
