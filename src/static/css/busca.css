@@ -1,0 +1,129 @@
+body {
+    background: white;
+    color:  #154250;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    background: #EDEDED;
+    padding: 10px;
+}
+
+.logo-texto {
+    color:  #154250;
+}
+
+.signin {
+    color:  #154250;
+}
+
+.busca {
+    width: 1100px;
+    margin: 20px auto;
+}
+
+.resultados-header {
+    padding: 20px;
+}
+
+.resultados-titulo {
+    font-size: 32px;
+    margin-top: 40px;
+}
+
+.resultados-filtros {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    text-align: center;
+    height: 40px;
+}
+
+.resultados-filtros i {
+    margin-right: 10px;
+}
+
+.resultados-cursos {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 250px;
+}
+
+.resultado-desc {
+    margin: 20px 0;
+}
+
+.item {
+    margin: 20px
+}
+
+.resultado-img {
+    background: lightblue;
+}
+
+.resultado-textos {
+    position: relative;
+}
+
+.resultado-rating {
+    position: absolute;
+    bottom: 0;
+}
+
+.resultado-botoes {
+    display: grid;
+
+}
+
+.resultado-links {
+    margin: auto;
+    margin-right: 20px;
+}
+
+.btn {
+    margin: 5px auto;
+}
+
+.resultado-link {
+    background-color: #154250;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.resultado-preco {
+    background-color: #EDEDED;
+    border: none;
+    color: #154250;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.paginacao a {
+    padding: 10px;
+    text-decoration: none;
+    color: #154250;
+}
+
+.copyright {
+    font-size: 12px;
+    color: white;
+}

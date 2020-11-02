@@ -1,145 +1,126 @@
-body {
-    background: #ffffff;
+.body {
+    position: relative;
+    min-width: 100vh;
 }
 
-
-.navbar {
-    padding: 0;
+.logo a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #154250;
 }
 
+.usuario-alertas i {
+    color: #154250;
+}
 
-.perfil {
+.dropdown i {
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    width: 1100px;
+    margin: 100px auto;
+}
+
+.perfil-usuario {
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
+.avatar {
+    width: 40%;
+}
 
-.perfil > div {
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
-  }
+.avatar-abreviado {
+    border: none;
+    border-radius: 20px;
+    padding: 32px;
+    font-size: 62px;
+    background: #154250;
+    color: white;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+}
 
-
-.cursos {
+.editar-perfil {
+    display: flex;
     flex-direction: column;
+    margin-left: 25px;
 }
 
-
-.info-pessoal {
-    height: 1000px;
-    width: 275px;
-}
-
-
-.perfil-avatar {
+.editar-btn {
+    color: white;
+    padding: 10px;
     border-radius: 50%;
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    border: none;
+    background: #154250;
+    text-decoration: none;
+    cursor: pointer;
 }
 
+.linkedin {
+    margin-top: 10px;
+    width: 36.67px;
+}
 
 .perfil-info {
-    text-align: center;
-    font-size: 20px;
-    font-family: poppins;
+    margin-top: 20px;
+}
+
+.nome {
+    font-size: 24px;
+}
+
+.nick {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 80%;
+}
+
+.bottom-line {
+    border-bottom: 1px solid;
     padding: 10px;
+    opacity: 15%;
 }
 
+.about {
+    margin-top: 20px;
+    font-size: 24px;
+}
 
-.perfil-info-classificacao {
+.about-titulo {
+    margin-top: 20px;
+    opacity: 70%;
+}
+
+.about-desc {
+    margin-top: 5px;
+    text-align: initial;
+}
+
+.container-perfil {
+    height: 200px;
+    margin-bottom: 50px;
     text-align: center;
-    font-size: 15px;
-    font-family: poppins;
-    padding: 0;
+    border-radius: 20px;
 }
 
-
-.perfil-info-empresa {
-    text-align: center;
-    font-size: 15px;
-    font-family: poppins;
-    padding: 0; 
+.container-perfil h1 {
+    padding: 40px;
+    font-size: 22px;
+    text-align: initial;
 }
 
-
-.perfil-info-bio {
-    text-align: center;
-    font-size: 15px;
-    font-family: poppins;
-    padding: 0; 
+.container-perfil i {
+    margin-right: 10px;
 }
 
-
-.perfil-editar {
-    border-radius: 12px;
-    font-size: 12px;
-    font-family: poppins;
-    transition-duration: 0.4s;
+.dashboard {
+    height: 400px;
 }
 
-
-.perfil-editar:hover {
-    background-color: #1b1a1a; /* Green */
-    color: white;
-}
-
-
-.perfil-logout {
-    border-radius: 12px;
-    font-size: 12px;
-    font-family: poppins;
-    transition-duration: 0.4s;
-}
-
-
-.perfil-logout:hover {
-    background-color: #1b1a1a; /* Green */
-    color: white;
-}
-
-
-.cursos {
-    height: 1000px;
-    width: 800px;
-}
-
-
-.cursos-ativos {
-    height: 50%;
-}
-
-
-.cursos-ativos-titulo {
-    width: 50%;
-    height: 100%;
-    text-align: center;
-    vertical-align: middle;
-    font-family: poppins;
-}
-
-
-.cursos-ativos-curso {
-    font-family: poppins;
-    font-size: 15px;
-}
-
-
-.cursos-ativos-pags {
-    display: flex;
-    justify-content: center;
-    margin-top: 210px;
-}
-
-
-.cursos-recomendados {
-    height: 50%;
-}
-
-
-.cursos-recomendados-building {
-    max-height:100%; 
-    max-width:100%;
+.shadow {
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
 }
