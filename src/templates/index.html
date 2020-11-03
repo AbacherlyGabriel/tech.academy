@@ -134,13 +134,14 @@
                 <p>comece agora mesmo :)</p>
                 <h1>descubra o curso ideal para você</h1>
             </div>
-            
-            <div class="busca-form">
-                <input type="text" class="busca-input" placeholder="busque por cursos, plataformas e áreas de interesse...">
-                <button type="submit" class="busca-btn">
-                  <i class="fa fa-search"></i>
-               </button>
-             </div>
+            <form>
+                <div class="busca-form">
+                    <input type="text" class="busca-input" placeholder="busque por cursos do seu interesse..." name="description">
+                    <button type="submit" class="busca-btn" formaction="{{ url_for('buscar') }}" formmethod="POST">
+                      <i class="fa fa-search"></i>
+                   </button>
+                 </div>
+            </form>
         </section>
         <!-- Fim: Busca -->
 

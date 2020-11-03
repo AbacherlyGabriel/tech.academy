@@ -49,7 +49,7 @@ def visualizar_perfil():
 
 @app.route('/criar', methods=['POST'])
 def criar():
-    if (user.create(request.form['email'], request.form['nome'], request.form['senha'], request.form['valida_senha'])):
+    if (user.create_user(request.form['email'], request.form['nome'], request.form['senha'], request.form['valida_senha'])):
         session['usuario_logado'] = request.form['nome']
         return redirect('/perfil')
     else:
@@ -57,8 +57,9 @@ def criar():
         return redirect('/register')
 
 
-@app.route('/buscar')
+@app.route('/buscar', methods=['POST'])
 def buscar():
+    request.form['description']
     return render_template('busca.html')
 
 
