@@ -1,5 +1,12 @@
+body {
+    position: relative; 
+    min-height: 100vh;
+}
+
 h1 {
+    text-align: center;
     font-size: 18px;
+
 }
 
 p {
@@ -7,7 +14,20 @@ p {
     font-size: 16px;
 }
 
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+.about-us {
+    width: 1100px;
+    display: flex;
+    /* align-items: center; */
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 50px;
+    /* justify-content: center; */
+    margin: auto;
+    text-align: justify;
+}
+
+/*
+
 @media screen and (min-width: 601px) {
     .container-about h1 {
         font-size: 16px;
@@ -18,7 +38,6 @@ p {
     }
   }
   
-  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
   @media screen and (max-width: 600px) {
     .container-about h1 {
         font-size: 8px;
@@ -28,3 +47,4 @@ p {
         font-size: 4px;
     }
   }
+  */
