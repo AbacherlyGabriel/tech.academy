@@ -10,12 +10,12 @@ def test_dao_read_wrong_password():
 
 
 def test_dao_create_error_different_passwords():
-    assert UserDao().create("admin@admin.com", "admin", "pass", "wrong") is False
+    assert UserDao().create_user("admin@admin.com", "admin", "pass", "wrong") is False
 
 
 def test_dao_create_error_same_name():
-    assert UserDao().create("admin@admin.com", "admin", "pass", "pass") is False
+    assert UserDao().create_user("admin@admin.com", "admin", "pass", "pass") is False
 
 
 def test_dao_create_error_same_key():
-    assert UserDao().create("admin@admin.com", "test", "pass", "pass") is False
+    assert UserDao().create_user("admin@admin.com", "test", "pass", "pass") is False

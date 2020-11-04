@@ -59,8 +59,11 @@ def criar():
 
 @app.route('/buscar', methods=['POST'])
 def buscar():
-    request.form['description']
-    return render_template('busca.html')
+    docs = user.query_by_description(request.form['description'])
+    results = []
+    for curso in docs:
+        results.append(curso)
+    return render_template('busca.html', results=results, query=request.form['description'])
 
 
 @app.route('/about')

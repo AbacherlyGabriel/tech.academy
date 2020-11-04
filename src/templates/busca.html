@@ -16,8 +16,10 @@
     <header>
         <div class="container navbar">
             <div class="logo">
-                <img class="logo-img" src="{{ url_for('static', filename='imgs/tech.logo2.svg') }}">
-                <h1 class="logo-texto">tech.academy</h1>
+                <a class="" href="/">
+                    <img class="logo-img" src="{{ url_for('static', filename='imgs/tech.logo2.svg') }}">
+                </a>
+                <h1 class="logo-texto"><a href="/">tech.academy</a></h1>
             </div>
 
             {% if session.get('usuario_logado') == None %}
@@ -58,18 +60,20 @@
                 <h1>descubra o curso ideal para você</h1>
             </div>
             
-            <div class="busca-form">
-                <input type="text" class="busca-input" placeholder="busque por cursos, plataformas e áreas de interesse...">
-                <button type="submit" class="busca-btn">
-                  <i class="fa fa-search"></i>
-               </button>
-             </div>
+            <form>
+                <div class="busca-form">
+                    <input type="text" class="busca-input" placeholder="busque por cursos do seu interesse..." name="description">
+                    <button type="submit" class="busca-btn" formaction="{{ url_for('buscar') }}" formmethod="POST">
+                      <i class="fa fa-search"></i>
+                   </button>
+                 </div>
+            </form>
         </section>
         <!-- Fim: Busca -->
 
         <!-- Header de Resultados -->
         <section class="resultados-header">
-            <div class="resultados-titulo">1.000 resultados para sua-busca</div>
+            <div class="resultados-titulo">{{ results|length }} resultados para {{ query }}</div>
             <div class="resultados-filtros">
                 <i class="fas fa-filter"></i>
                 filtros e ordenação
@@ -78,140 +82,36 @@
         <!-- Fim: Header de Resultados -->
 
         <!-- Resultados: Cursos -->
-        <section class="resultados-cursos">
-            <div class="item resultado-img"></div>
+        {% for curso in results %}
+            <section class="resultados-cursos">
+                <div class="item resultado-img"></div>
 
-            <div class="item resultado-textos">
-                <h1 class="resultado-desc">curso 01</h1>
-                <h2 class="resultado-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet fringilla arcu, a auctor justo cursus non.</h2>
-                <h2 class="resultado-desc">plataforma: test</h2>
-                <h2 class="resultado-desc resultado-rating">
-                    3.0
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    (1.000)
-                </h2>
-            </div>
-
-            <div class="resultado-links">
-                <div class="resultado-botoes">
-                    <button class="btn resultado-link">saiba mais</button>
-                    <button class="btn resultado-link">avaliações</button>
-                    <button class="btn resultado-preco">R$ 19,99</button>
+                <div class="item resultado-textos">
+                    <h1 class="resultado-desc">{{ curso['nome_curso'] }}</h1>
+                    <h2 class="resultado-desc">{{ curso['descricao'] }}</h2>
+                    <h2 class="resultado-desc">{{ curso['oferecimento'] }}</h2>
+                    <h2 class="resultado-desc resultado-rating">
+                        {{ curso['avaliacao'] }}
+                        {% for i in range(curso['avaliacao']) %}
+                            <i class="fas fa-star"></i>
+                        {% endfor %}
+                        {% for i in range(5 - curso['avaliacao']) %}
+                            <i class="far fa-star"></i>
+                        {% endfor %}
+                        (99)
+                    </h2>
                 </div>
-            </div>
-        </section>
 
-        <section class="resultados-cursos">
-            <div class="item resultado-img"></div>
-
-            <div class="item resultado-textos">
-                <h1 class="resultado-desc">curso 02</h1>
-                <h2 class="resultado-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet fringilla arcu, a auctor justo cursus non.</h2>
-                <h2 class="resultado-desc">plataforma: test</h2>
-                <h2 class="resultado-desc resultado-rating">
-                    3.0
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    (1.000)
-                </h2>
-            </div>
-
-            <div class="resultado-links">
-                <div class="resultado-botoes">
-                    <button class="btn resultado-link">saiba mais</button>
-                    <button class="btn resultado-link">avaliações</button>
-                    <button class="btn resultado-preco">R$ 19,99</button>
+                <div class="resultado-links">
+                    <div class="resultado-botoes">
+                        <button class="btn resultado-link">saiba mais</button>
+                        <button class="btn resultado-link">avaliações</button>
+                        <button class="btn resultado-preco">R$ {{ curso['valor'] }}</button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        {% endfor %}
 
-        <section class="resultados-cursos">
-            <div class="item resultado-img"></div>
-
-            <div class="item resultado-textos">
-                <h1 class="resultado-desc">curso 03</h1>
-                <h2 class="resultado-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet fringilla arcu, a auctor justo cursus non.</h2>
-                <h2 class="resultado-desc">plataforma: test</h2>
-                <h2 class="resultado-desc resultado-rating">
-                    3.0
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    (1.000)
-                </h2>
-            </div>
-
-            <div class="resultado-links">
-                <div class="resultado-botoes">
-                    <button class="btn resultado-link">saiba mais</button>
-                    <button class="btn resultado-link">avaliações</button>
-                    <button class="btn resultado-preco">R$ 19,99</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="resultados-cursos">
-            <div class="item resultado-img"></div>
-
-            <div class="item resultado-textos">
-                <h1 class="resultado-desc">curso 04</h1>
-                <h2 class="resultado-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet fringilla arcu, a auctor justo cursus non.</h2>
-                <h2 class="resultado-desc">plataforma: test</h2>
-                <h2 class="resultado-desc resultado-rating">
-                    3.0
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    (1.000)
-                </h2>
-            </div>
-
-            <div class="resultado-links">
-                <div class="resultado-botoes">
-                    <button class="btn resultado-link">saiba mais</button>
-                    <button class="btn resultado-link">avaliações</button>
-                    <button class="btn resultado-preco">R$ 19,99</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="resultados-cursos">
-            <div class="item resultado-img"></div>
-
-            <div class="item resultado-textos">
-                <h1 class="resultado-desc">curso 05</h1>
-                <h2 class="resultado-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet fringilla arcu, a auctor justo cursus non.</h2>
-                <h2 class="resultado-desc">plataforma: test</h2>
-                <h2 class="resultado-desc resultado-rating">
-                    3.0
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    (1.000)
-                </h2>
-            </div>
-
-            <div class="resultado-links">
-                <div class="resultado-botoes">
-                    <button class="btn resultado-link">saiba mais</button>
-                    <button class="btn resultado-link">avaliações</button>
-                    <button class="btn resultado-preco">R$ 19,99</button>
-                </div>
-            </div>
-        </section>
         <!-- Fim: Resultados de Cursos -->
 
         <section class="paginacao">
