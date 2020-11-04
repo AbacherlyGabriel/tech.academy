@@ -6,6 +6,7 @@ body {
 .logo-texto a {
     text-decoration: none;
     font-size: 16px;
+    font-weight: 100;
 }
 
 h1 {
