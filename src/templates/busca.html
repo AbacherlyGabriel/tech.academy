@@ -76,7 +76,7 @@
 
             {% if query|length > 0 %}
 
-            <div class="resultados-titulo">{{ results|length }} resultados para {{ query }}</div>
+            <div class="resultados-titulo">{{ results|length }} resultado(s) para {{ query }}</div>
             
             {% else %}
 
@@ -97,9 +97,9 @@
                 <div class="item resultado-img"></div>
 
                 <div class="item resultado-textos">
-                    <h1 class="resultado-desc">{{ curso['nome_curso'] }}</h1>
-                    <h2 class="resultado-desc">{{ curso['descricao'] }}</h2>
-                    <h2 class="resultado-desc oferecimento">{{ curso['oferecimento'] }}</h2>
+                    <h1 class="resultado-desc">{{ curso['nome_curso']|lower }}</h1>
+                    <h2 class="resultado-desc">{{ curso['descricao']|lower }}</h2>
+                    <h2 class="resultado-desc oferecimento">{{ curso['oferecimento']|lower }}</h2>
                     <h2 class="resultado-desc resultado-rating">
                         {{ curso['avaliacao'] }}
                         {% for i in range(curso['avaliacao']) %}
