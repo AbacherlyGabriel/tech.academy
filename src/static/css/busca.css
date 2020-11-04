@@ -56,7 +56,10 @@ header {
 }
 
 .resultado-desc {
-    /* margin: 20px 0; */
+    margin: 20px 0;
+}
+
+.oferecimento {
     margin: 0;
     display: inline-block;
     background: #7d3131;
