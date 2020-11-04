@@ -33,7 +33,7 @@ header {
 }
 
 .resultados-titulo {
-    font-size: 32px;
+    font-size: 36px;
     margin-top: 40px;
 }
 
@@ -56,7 +56,15 @@ header {
 }
 
 .resultado-desc {
-    margin: 20px 0;
+    /* margin: 20px 0; */
+    margin: 0;
+    display: inline-block;
+    background: #7d3131;
+    padding: 0 10px;
+    /* border-radius: 40px; */
+    color: white;
+    /* font-weight: 800; */
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
 }
 
 .item {
