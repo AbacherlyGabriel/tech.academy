@@ -73,7 +73,17 @@
 
         <!-- Header de Resultados -->
         <section class="resultados-header">
+
+            {% if query|length > 0 %}
+
             <div class="resultados-titulo">{{ results|length }} resultados para {{ query }}</div>
+            
+            {% else %}
+            
+            <div class="resultados-titulo">descubra o curso ideal para você :)</div>
+            
+            {% endif %}
+
             <div class="resultados-filtros">
                 <i class="fas fa-filter"></i>
                 filtros e ordenação

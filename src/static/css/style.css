@@ -55,6 +55,11 @@ header {
     margin-left: 10px;
 }
 
+.logo-texto a {
+    color: white;
+    text-decoration: none;
+}
+
 .signin {
     color: white;
     margin: 20px;

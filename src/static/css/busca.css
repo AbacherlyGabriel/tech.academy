@@ -14,6 +14,10 @@ header {
     color:  #154250;
 }
 
+.logo-texto a {
+    text-decoration: none;
+}
+
 .signin {
     color:  #154250;
 }
