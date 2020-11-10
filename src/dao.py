@@ -2,8 +2,7 @@ import os
 
 from pymongo import errors, MongoClient
 
-#db_pass = os.environ.get('DBPASS')
-db_pass = 'jatoba123'
+db_pass = os.environ.get('DBPASS')
 client = MongoClient(
     f"mongodb+srv://yanhkawakami:{db_pass}@pisi2020.qelym.mongodb.net/")
 
