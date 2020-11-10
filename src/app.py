@@ -4,7 +4,8 @@ from flask import Flask, session, flash, redirect, render_template, request
 from dao import UserDao
 
 app = Flask(__name__)
-secret = os.environ.get('SESSIONKEY')
+#secret = os.environ.get('SESSIONKEY')
+secret = 'teste'
 app.secret_key = secret
 user = UserDao()
 

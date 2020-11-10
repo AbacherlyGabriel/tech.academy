@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="ptbr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/busca.css') }}">
 
     <script src="https://kit.fontawesome.com/aba31752f4.js" crossorigin="anonymous"></script>
-    
+
     <title>tech.academy | resultados</title>
 </head>
+
 <body>
     <header>
         <div class="container navbar">
@@ -32,7 +34,7 @@
             <div class="usuario-alertas">
                 <a href="#"><i class="far fa-comment-alt"></i></a>
                 <a href="#"><i class="fas fa-bell"></i></a>
-                
+
                 <div class="dropdown">
                     <button class="usuario-dropdown">
                         {{session.get('usuario_logado')}}
@@ -59,14 +61,15 @@
             <div class="busca-texto">
                 <h1>descubra o curso ideal para você</h1>
             </div>
-            
+
             <form>
                 <div class="busca-form">
-                    <input type="text" class="busca-input" placeholder="busque por cursos do seu interesse..." name="description">
+                    <input type="text" class="busca-input" placeholder="busque por cursos do seu interesse..."
+                        name="description">
                     <button type="submit" class="busca-btn" formaction="{{ url_for('buscar') }}" formmethod="POST">
-                      <i class="fa fa-search"></i>
-                   </button>
-                 </div>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
             </form>
         </section>
         <!-- Fim: Busca -->
@@ -77,11 +80,11 @@
             {% if query|length > 0 %}
 
             <div class="resultados-titulo">{{ results|length }} resultado(s) para {{ query }}</div>
-            
+
             {% else %}
 
             <div class="resultados-titulo">explore os cursos disponíveis ;)</div>
-            
+
             {% endif %}
 
             <div class="resultados-filtros">
@@ -93,33 +96,34 @@
 
         <!-- Resultados: Cursos -->
         {% for curso in results %}
-            <section class="resultados-cursos">
-                <div class="item resultado-img"></div>
+        <section class="resultados-cursos">
+            <div class="item resultado-img">
+                <img class="img-curso" src="{{ url_for('static', filename=curso['imgPath']) }}"
+                    style="width: 234px; height: 234px; display: block; background-color: white;"></div>
+            <div class="item resultado-textos">
+                <h1 class="resultado-desc">{{ curso['nome_curso']|lower }}</h1>
+                <h2 class="resultado-desc">{{ curso['descricao']|lower }}</h2>
+                <h2 class="resultado-desc oferecimento">{{ curso['oferecimento']|lower }}</h2>
+                <h2 class="resultado-desc resultado-rating">
+                    {{ curso['avaliacao'] }}
+                    {% for i in range(curso['avaliacao']) %}
+                    <i class="fas fa-star"></i>
+                    {% endfor %}
+                    {% for i in range(5 - curso['avaliacao']) %}
+                    <i class="far fa-star"></i>
+                    {% endfor %}
+                    (99)
+                </h2>
+            </div>
 
-                <div class="item resultado-textos">
-                    <h1 class="resultado-desc">{{ curso['nome_curso']|lower }}</h1>
-                    <h2 class="resultado-desc">{{ curso['descricao']|lower }}</h2>
-                    <h2 class="resultado-desc oferecimento">{{ curso['oferecimento']|lower }}</h2>
-                    <h2 class="resultado-desc resultado-rating">
-                        {{ curso['avaliacao'] }}
-                        {% for i in range(curso['avaliacao']) %}
-                            <i class="fas fa-star"></i>
-                        {% endfor %}
-                        {% for i in range(5 - curso['avaliacao']) %}
-                            <i class="far fa-star"></i>
-                        {% endfor %}
-                        (99)
-                    </h2>
+            <div class="resultado-links">
+                <div class="resultado-botoes">
+                    <button class="btn resultado-link">saiba mais</button>
+                    <button class="btn resultado-link">avaliações</button>
+                    <button class="btn resultado-preco">R$ {{ curso['valor'] }}</button>
                 </div>
-
-                <div class="resultado-links">
-                    <div class="resultado-botoes">
-                        <button class="btn resultado-link">saiba mais</button>
-                        <button class="btn resultado-link">avaliações</button>
-                        <button class="btn resultado-preco">R$ {{ curso['valor'] }}</button>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
         {% endfor %}
 
         <!-- Fim: Resultados de Cursos -->
@@ -140,4 +144,5 @@
     </footer>
 
 </body>
+
 </html>
