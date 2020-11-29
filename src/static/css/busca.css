@@ -61,6 +61,7 @@ header {
     display: grid;
     grid-template-columns: 1.5fr 3.5fr 1fr;
     height: 250px;
+    border-bottom: 1px solid #EDEDED;
 }
 
 .resultado-desc {
@@ -83,7 +84,7 @@ header {
 }
 
 .resultado-img {
-    background: lightblue;
+    background: white;
 }
 
 .resultado-textos {
