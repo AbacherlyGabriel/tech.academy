@@ -8,10 +8,23 @@ body {
     padding: 5px 8px 0 16px;
     padding-left: 14px;
     border: none;
-    width: 1000px;
+    width: 100%;
     border-radius: 40px;
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
     background-color: white;
+}
+
+.principal-busca {
+    display: flex;
+    flex: 1;
+    padding: 5px 8px 0 16px;
+    padding-left: 14px;
+    border: none;
+    width: 95%;
+    border-radius: 40px;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    background-color: white;
+    margin: auto;
 }
 
 .search-icon {
