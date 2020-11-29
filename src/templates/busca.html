@@ -114,7 +114,10 @@
         <!-- Resultados: Cursos -->
         {% for curso in results %}
             <section class="resultados-cursos">
-                <div class="item resultado-img"></div>
+                <div class="item resultado-img">
+                    <img class="img-curso" src="{{ url_for('static', filename=curso['imgPath']) }}"
+                    style="width: 234px; height: 234px; display: block; background-color: white;">
+                </div>
 
                 <div class="item resultado-textos">
                     <h1 class="resultado-desc">{{ curso['nome_curso']|lower }}</h1>
