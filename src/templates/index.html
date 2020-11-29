@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/search-bar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;400&family=Raleway:wght@300&display=swap" rel="stylesheet">
@@ -138,11 +139,30 @@
             </div>
             <form>
                 <div class="busca-form">
-                    <input type="text" class="busca-input" placeholder="busque por cursos do seu interesse..." name="description">
+                    <!-- Barra de Busca - Antiga -->
+                    <!-- <input type="text" class="busca-input" placeholder="busque por cursos do seu interesse..." name="description">
                     <button type="submit" class="busca-btn" formaction="{{ url_for('buscar') }}" formmethod="POST">
                       <i class="fa fa-search"></i>
                    </button>
-                 </div>
+                 </div>  -->
+                
+                 <!-- Barra de Busca - Nova -->
+                 <div class="principal">
+                    <div class="search-icon">
+                        <style></style>
+                        <div class="icon">
+                            <button class="search-bar-btn" type="submit" formmethod="POST" formaction="{{ url_for('buscar') }}">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div class="input-cfg"></div>
+                        <input class="input-txt" type="text" placeholder="busque por cursos do seu interesse..." name="description" autocomplete="off">
+                    </div>
+                </div>
+                <!-- Fim Barra de Busca - Nova -->
+
             </form>
         </section>
         <!-- Fim: Busca -->
