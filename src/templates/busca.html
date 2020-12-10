@@ -53,7 +53,7 @@
         </div>
     </header>
 
-    <div class="container column busca">
+    <div class="container column busca" style=" min-height: 100vh;">
 
         <!-- Form de Busca -->
         <section class="busca">
@@ -116,7 +116,7 @@
             <section class="resultados-cursos">
                 <div class="item resultado-img">
                     <img class="img-curso" src="{{ url_for('static', filename=curso['imgPath']) }}"
-                    style="width: 234px; height: 234px; display: block; background-color: white;">
+                    style="width: 200px; height: 200px; display: block; background-color: white;">
                 </div>
 
                 <div class="item resultado-textos">
@@ -148,11 +148,9 @@
         <!-- Fim: Resultados de Cursos -->
 
         <section class="paginacao">
-            <a href="#"><i class="fas fa-arrow-left"></i></a>
+            <a href="#" style="color: #e4cfcf;"><i class="fas fa-arrow-left"></i></a>
             <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#"><i class="fas fa-arrow-right"></i></a>
+            <a href="#" style="color: #e4cfcf;"><i class="fas fa-arrow-right"></i></a>
         </section>
     </div>
 

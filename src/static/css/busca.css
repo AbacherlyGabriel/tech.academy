@@ -150,18 +150,6 @@ header {
     color: #154250;
 }
 
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #154250;
-    text-align: center;
-    height: 100px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
 .copyright {
     font-size: 12px;
     color: white;
