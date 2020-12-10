@@ -246,7 +246,7 @@
                 <div class="blog">
                     <div class="blog-img">
                         <div class="blog-div">
-                            <img src="{{ url_for('static', filename='imgs/blogs/infoQ.png') }}">
+                            <img src="{{ url_for('static', filename='imgs/blogs/infoq.png') }}">
                         </div>
                     </div>
                     <div class="blog-texto">
@@ -314,7 +314,12 @@
         <!-- Parceiros -->
         <section class="parceiros">
             <div class="parceiros-texto">nossos parceiros</div>
-            <div class="parceiros-destaque">em construção...</div>
+            <div class="parceiros-destaque">
+                <div><img src="{{ url_for('static', filename='imgs/cursos/coursera.png') }}" style="width: 150px; height: 22px; filter: brightness(0.5);"></div>
+                <div><img src="{{ url_for('static', filename='imgs/cursos/alura.png') }}" style="width: 120px; height: 68px;"></div>
+                <div><img src="{{ url_for('static', filename='imgs/cursos/linkedin.png') }}" style="width: 200px; height: 39px; filter: brightness(0.5);"></div>
+                
+            </div>
         </section>
         <!-- Fim Parceiros -->
 

@@ -469,8 +469,8 @@ circle {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .parceiros-texto {
@@ -478,9 +478,17 @@ circle {
 }
 
 .parceiros-destaque {
-    border: 1px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
     margin-top: 20px;
     padding: 20px;
+}
+
+.parceiros-destaque div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer {
