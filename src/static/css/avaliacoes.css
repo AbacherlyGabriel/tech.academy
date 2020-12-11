@@ -1,0 +1,99 @@
+.comunidade {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.comunidade-avaliacoes {
+    font-size: 32px;
+}
+
+.comunidade-curso {
+    display: grid;
+    grid-template-columns: 1.5fr 3.5fr 1fr;
+    height: 250px;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.foruns {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.foruns-header {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.foruns-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    border: solid;
+    border-radius: 20px;
+    border-color: #154250;
+}
+
+.foruns-container a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #154250;
+}
+
+.foruns-rating {
+    margin-top: 5px;
+}
+
+.foruns-upd {
+    text-align: end;
+}
+
+.foruns-tempo-upd {
+    display: inline;
+    font-size: 24px;
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    background-color: #EDEDED;
+    height: 150px;
+    margin-top: 80px;
+}
+
+.banner-signin {
+    margin: auto;
+    margin-right: 0;
+    text-align: center;
+}
+
+.banner-signup {
+    margin: auto;
+    margin-left: 0;
+    text-align: center;
+}
+
+.b {
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.banner-logado-header {
+    margin-top: 80px;
+    background-color: #EDEDED;
+    padding: 10px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.banner-logado {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #EDEDED;
+    height: 100px;
+    margin-top: 90px;
+}

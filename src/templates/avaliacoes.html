@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/search-bar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/busca.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/avaliacoes.css') }}">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/aba31752f4.js" crossorigin="anonymous"></script>
+    
+    <title>tech.academy | resultados</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <a class="" href="/">
+                    <img class="logo-img" src="{{ url_for('static', filename='imgs/tech.logo2.svg') }}">
+                </a>
+                <h1 class="logo-texto"><a href="/">tech.academy</a></h1>
+            </div>
+
+            {% if session.get('usuario_logado') == None %}
+            <div class="sign">
+                <a class="signin" href="login">sign in</a>
+                <button class="signup" onclick="location.href='register'" type="button">sign up</button>
+            </div>
+
+            {% else %}
+            <div class="usuario-alertas">
+                <a href="#"><i class="far fa-comment-alt"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                
+                <div class="dropdown">
+                    <button class="usuario-dropdown">
+                        {{session.get('usuario_logado')}}
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-links">
+                        <a href="perfil">meu perfil</a>
+                        <a href="#">configurações</a>
+                        <div class="dropdown-logout">
+                            <button class="signup" onclick="location.href='logout'" type="button">logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="container column busca" style=" min-height: 100vh;">
+    
+        <!-- Form de Busca -->
+        <section class="busca">
+            <div class="busca-texto">
+                <h1>descubra o curso ideal para você</h1>
+            </div>
+            
+            <form>
+                <!-- Barra de Busca - Antiga -->
+                <!-- <div class="busca-form">
+                    <input type="text" class="busca-input" placeholder="busque por cursos do seu interesse..." name="description">
+                    <button type="submit" class="busca-btn" formaction="{{ url_for('buscar') }}" formmethod="POST">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    </div> -->
+
+                <!-- Barra de Busca - Nova -->
+                <div class="principal-busca">
+                    <div class="search-icon">
+                        <style></style>
+                        <div class="icon">
+                            <button class="search-bar-btn" type="submit" formmethod="POST" formaction="{{ url_for('buscar') }}">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div class="input-cfg"></div>
+                        <input class="input-txt" type="text" placeholder="busque por cursos do seu interesse..." name="description" autocomplete="off">
+                    </div>
+                </div>
+                <!-- Fim Barra de Busca - Nova -->
+            </form>
+        </section>
+        <!-- Fim: Busca -->
+
+        <!-- Comunidade: Avaliacoes Gerias -->
+        <section class="comunidade">
+            <div>comunidade</div>
+            <div class="comunidade-avaliacoes">avaliações</div>
+            <div class="comunidade-curso">
+                <div class="item resultado-img">
+                    <img class="img-curso" src="{{ url_for('static', filename='imgs/programacao_img.png') }}"
+                    style="width: 200px; height: 200px; display: block; background-color: white;">
+                </div>
+
+                <div class="item resultado-textos">
+                    <h1 class="resultado-desc">python para iniciantes</h1>
+                    <h2 class="resultado-desc">comece a incluir python no seu dia a dia e automatizar tarefas, melhorando e aumentando sua produtividades</h2>
+                    <h2 class="resultado-desc oferecimento">udacity</h2>
+                    <h2 class="resultado-desc resultado-rating">
+                        4.0
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        (99)
+                    </h2>
+                </div>
+
+                <div class="resultado-links">
+                    <div class="resultado-botoes">
+                        <button class="btn resultado-link">saiba mais</button>
+                        <button class="btn resultado-preco">R$ 15.99</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim - Comunidade: Avaliacoes Gerais -->
+
+        <!-- Foruns -->
+        <section class="foruns">
+            <div class="">fórum</div>
+            <div class="foruns-header">discussões</div>
+
+            <div class="foruns-container">
+                <div class="foruns-texto">
+                    <a href=""><div style="font-weight: 500; display: inline;">conteúdo:</div> discussões sobre o conteúdo do curso</a>
+                    <div class="foruns-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="foruns-upd">
+                    último post
+                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
+                </div>
+            </div>
+
+            <div class="foruns-container">
+                <div class="foruns-texto">
+                    <a href=""><div style="font-weight: 500; display: inline;">plataforma:</div> discussões sobre a plataforma do curso</a>
+                    <div class="foruns-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="foruns-upd">
+                    último post
+                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
+                </div>
+            </div>
+
+            <div class="foruns-container">
+                <div class="foruns-texto">
+                    <a href=""><div style="font-weight: 500; display: inline;">instrutores:</div> avaliações dos instrutores do curso</a>
+                    <div class="foruns-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="foruns-upd">
+                    último post
+                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
+                </div>
+            </div>
+
+            <div class="foruns-container">
+                <div class="foruns-texto">
+                    <a href=""><div style="font-weight: 500; display: inline;">suporte:</div> avaliação do suporte dos instrutores/plataforma</a>
+                    <div class="foruns-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="foruns-upd">
+                    último post
+                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
+                </div>
+            </div>
+
+            <div class="foruns-container">
+                <div class="foruns-texto">
+                    <a href=""><div style="font-weight: 500; display: inline;">off-topic:</div> discussões gerais e descontraídas sobre o curso</a>
+                    <div class="foruns-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="foruns-upd">
+                    último post
+                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Fim: Foruns -->
+    </div>
+
+    <!-- Banner: Login/Cadastre-se -->
+
+    {% if session.get('usuario_logado') == None %}
+
+    <div class="banner">
+        <div class="banner-signin">
+            <div style="font-weight: 500; font-size: 18px; padding: 5px;">já tem conta?</div>
+            entre e de voz à sua experiência
+
+            <button class="signup b" onclick="location.href='login'" type="button">sign in</button>
+        </div>
+
+        <div class="banner-signup">
+            <div style="font-weight: 500; font-size: 18px; padding: 5px;">pronto para começar?</div>
+            cadastre-se e faça parte da comunidade
+
+            <button class="signup b" onclick="location.href='register'" type="button">sign up</button>
+        </div>
+    </div>
+
+    {% else %}
+
+    <!--
+    <div class="banner-logado-header">nossos parceiros</div>
+    -->
+
+    <div class="banner-logado">
+        <div style="margin: auto; margin-right: 0;"><img src="{{ url_for('static', filename='imgs/cursos/coursera.png') }}" style="width: 150px; height: 22px; "></div>
+        <div style="margin: auto;"><img src="{{ url_for('static', filename='imgs/cursos/alura.png') }}" style="width: 120px; height: 68px;"></div>
+        <div style="margin: auto; margin-left: 0;"><img src="{{ url_for('static', filename='imgs/cursos/linkedin.png') }}" style="width: 200px; height: 39px; filter: brightness(0.5);"></div>
+
+    </div>
+
+    {% endif %}
+
+    <!-- Fim - Banner: Login/Cadastre-se -->
+
+    <footer class="footer">
+        <div class="copyright">copyright &copy tech.academy, inc. all rights reserved</div>
+    </footer>
+
+</body>
+
+</html>
