@@ -74,3 +74,8 @@ def about():
 @app.route('/avaliacoes')
 def avaliacoes():
     return render_template('avaliacoes.html')
+
+
+@app.route('/forum')
+def forum():
+    return render_template('forum.html')

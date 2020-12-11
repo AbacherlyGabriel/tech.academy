@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/busca.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/avaliacoes.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forum.css') }}">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
@@ -135,12 +136,34 @@
         <!-- Foruns -->
         <section class="foruns">
             <div class="">fórum</div>
-            <div class="foruns-header">discussões</div>
+            <div class="foruns-header">conteúdo</div>
+            <div class="foruns-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
 
-            <div class="foruns-container">
-                <div class="foruns-texto">
-                    <a href="forum"><div style="font-weight: 500; display: inline;">conteúdo:</div> discussões sobre o conteúdo do curso</a>
-                    <div class="foruns-rating">
+            <!-- Topicos -->
+            <div class="topicos-container">
+                <div class="topicos-row-1">
+                    <div class="topicos-avatar">GA</div>
+                    <div class="topicos-titulo">Lorem ipsum dolor sit amet</div>
+                    <div class="topicos-rep">
+                        <div>1.000 <i class="fas fa-heart"></i></div>
+                        <div>300 <i class="fas fa-comment-dots"></i></div>
+                        <div>1hr <i class="fas fa-clock"></i></div>
+                    </div>
+                </div>
+
+                <div class="topicos-row-2">
+                    <div class="topicos-tags">
+                        <span>tag1</span>
+                        <span>tag2</span>
+                        <span>tag3</span>
+                    </div>
+                    <div class="topicos-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -148,17 +171,26 @@
                         <i class="far fa-star"></i>
                     </div>
                 </div>
-
-                <div class="foruns-upd">
-                    último post
-                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
-                </div>
             </div>
 
-            <div class="foruns-container">
-                <div class="foruns-texto">
-                    <a href="forum"><div style="font-weight: 500; display: inline;">plataforma:</div> discussões sobre a plataforma do curso</a>
-                    <div class="foruns-rating">
+            <div class="topicos-container">
+                <div class="topicos-row-1">
+                    <div class="topicos-avatar">MA</div>
+                    <div class="topicos-titulo">Lorem ipsum dolor sit amet</div>
+                    <div class="topicos-rep">
+                        <div>1.000 <i class="fas fa-heart"></i></div>
+                        <div>300 <i class="fas fa-comment-dots"></i></div>
+                        <div>1hr <i class="fas fa-clock"></i></div>
+                    </div>
+                </div>
+
+                <div class="topicos-row-2">
+                    <div class="topicos-tags">
+                        <span>tag1</span>
+                        <span>tag2</span>
+                        <span>tag3</span>
+                    </div>
+                    <div class="topicos-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -166,17 +198,26 @@
                         <i class="far fa-star"></i>
                     </div>
                 </div>
-
-                <div class="foruns-upd">
-                    último post
-                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
-                </div>
             </div>
 
-            <div class="foruns-container">
-                <div class="foruns-texto">
-                    <a href="forum"><div style="font-weight: 500; display: inline;">instrutores:</div> avaliações dos instrutores do curso</a>
-                    <div class="foruns-rating">
+            <div class="topicos-container">
+                <div class="topicos-row-1">
+                    <div class="topicos-avatar">AL</div>
+                    <div class="topicos-titulo">Lorem ipsum dolor sit amet</div>
+                    <div class="topicos-rep">
+                        <div>1.000 <i class="fas fa-heart"></i></div>
+                        <div>300 <i class="fas fa-comment-dots"></i></div>
+                        <div>1hr <i class="fas fa-clock"></i></div>
+                    </div>
+                </div>
+
+                <div class="topicos-row-2">
+                    <div class="topicos-tags">
+                        <span>tag1</span>
+                        <span>tag2</span>
+                        <span>tag3</span>
+                    </div>
+                    <div class="topicos-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -184,17 +225,26 @@
                         <i class="far fa-star"></i>
                     </div>
                 </div>
-
-                <div class="foruns-upd">
-                    último post
-                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
-                </div>
             </div>
 
-            <div class="foruns-container">
-                <div class="foruns-texto">
-                    <a href="forum"><div style="font-weight: 500; display: inline;">suporte:</div> avaliação do suporte dos instrutores/plataforma</a>
-                    <div class="foruns-rating">
+            <div class="topicos-container">
+                <div class="topicos-row-1">
+                    <div class="topicos-avatar">YK</div>
+                    <div class="topicos-titulo">Lorem ipsum dolor sit amet</div>
+                    <div class="topicos-rep">
+                        <div>1.000 <i class="fas fa-heart"></i></div>
+                        <div>300 <i class="fas fa-comment-dots"></i></div>
+                        <div>1hr <i class="fas fa-clock"></i></div>
+                    </div>
+                </div>
+
+                <div class="topicos-row-2">
+                    <div class="topicos-tags">
+                        <span>tag1</span>
+                        <span>tag2</span>
+                        <span>tag3</span>
+                    </div>
+                    <div class="topicos-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -202,30 +252,61 @@
                         <i class="far fa-star"></i>
                     </div>
                 </div>
-
-                <div class="foruns-upd">
-                    último post
-                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
-                </div>
             </div>
+            <!-- Fim: Topicos -->
 
-            <div class="foruns-container">
-                <div class="foruns-texto">
-                    <a href="forum"><div style="font-weight: 500; display: inline;">off-topic:</div> discussões gerais e descontraídas sobre o curso</a>
-                    <div class="foruns-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+            <!-- Adicionar Topico -->
+            <div style="text-align: center;">
+                <button class="topicos-add"><i class="fas fa-plus-circle"></i></button>
+
+                <section id="001" class="modal">
+                    <div class="modal-conteudo modal-animate-zoom">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h1>novo tópico</h1>
+                        </div>
+
+                        <div class="bottom-line"></div>
+
+                        <div class="modal-form">
+                            <form action="" method="" autocomplete="off">
+                                <div class="modal-form-nome">
+                                    <div class="titulo"><label for="fname">título</label></div>
+                                    <input type="text" id="fname" name="fname" placeholder="título do tópico...">
+                                </div>
+
+                                <div class="modal-form-desc">
+                                    <div class="titulo"><label for="desc">descrição</label></div>
+                                    <!-- <input type="text" id="fname" name="desc" placeholder="descricao do tópico..."> -->
+                                    <textarea class="modal-desc" rows="4" cols="50" name="comment" form="usrform" placeholder="descricao do tópico"></textarea>
+                                </div>
+
+                                <div class="modal-form-tags">
+                                    <div class="titulo"><label for="tags">tags</label></div>
+                                    <input type="text" id="fname" name="tags" placeholder="tags...">
+                                </div>
+
+                                <div class="modal-form-rating">
+                                    <div class="titulo"><label for="rating">rating</label></div>
+                                    <div style="text-align: initial;">
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <div class="modal-btns">
+                                    <button id="002" class="signup cancelar-btn" type="button">cancelar</button>
+                                    <button class="signup salvar-btn" type="submit">enviar</button>
+                                </div>
+                            </form> 
+                        </div>
                     </div>
-                </div>
-
-                <div class="foruns-upd">
-                    último post
-                    <div class="">há <div class="foruns-tempo-upd">1hr</div></div>
-                </div>
+                </section>
             </div>
+            <!-- Fim: Adicionar Topico -->
 
         </section>
         <!-- Fim: Foruns -->
@@ -271,6 +352,8 @@
     <footer class="footer">
         <div class="copyright">copyright &copy tech.academy, inc. all rights reserved</div>
     </footer>
+
+    <script src="{{ url_for('static', filename='js/topico.js') }}"></script>
 
 </body>
 
