@@ -112,3 +112,7 @@ textarea {
     color: #154250;
     margin-bottom: 20px;
 }
+
+.modal textarea:focus {
+    background-color: lightblue;
+  }
