@@ -55,8 +55,9 @@
             <!-- Navbar: Usuário Não Logado -->
             {% else %}
             <div class="sign">
-                <a class="signin" href="login">sign in</a>
-                <button class="signup btn-effect" onclick="location.href='register'" type="button">sign up</button>
+                <!-- <a class="signin" href="login">sign in</a> -->
+                <button class="signin" onclick="location.href='login'" type="button">entrar</button>
+                <button class="signup btn-effect" onclick="location.href='register'" type="button">cadastre-se</button>
             </div>
             {% endif %}
         </div>
@@ -186,6 +187,7 @@
                     </div>
                     <div class="curso-destaque-texto">
                         <div class="blog-div">
+                            <span class="tooltip">inteligência artificial</span>
                             machine learning
                         </div>
                     </div>
@@ -199,6 +201,7 @@
                     </div>
                     <div class="curso-destaque-texto">
                         <div class="blog-div">
+                            <span class="tooltip">interfaces de usuário</span>
                             front-end
                         </div>
                     </div>
@@ -212,6 +215,7 @@
                     </div>
                     <div class="curso-destaque-texto">
                         <div class="blog-div">
+                            <span class="tooltip">por trás da aplicação</span>
                             back-end
                         </div>
                     </div>
@@ -225,6 +229,7 @@
                     </div>
                     <div class="curso-destaque-texto">
                         <div class="blog-div">
+                            <span class="tooltip">gerenciamento de projetos</span>
                             agile
                         </div>
                     </div>
@@ -238,6 +243,7 @@
                     </div>
                     <div class="curso-destaque-texto">
                         <div class="blog-div">
+                            <span class="tooltip">protótipos</span>
                             design
                         </div>
                     </div>
@@ -258,7 +264,8 @@
                     </div>
                     <div class="blog-texto">
                         <div class="blog-div">
-                            infoQ
+                            <span class="tooltip">notícias</span>
+                            <a href="https://www.infoq.com/br/" style="text-decoration: none; color: white; cursor: pointer;" target="_blank">infoQ</a>
                         </div>
                     </div>
                 </div>
@@ -271,7 +278,8 @@
                     </div>
                     <div class="blog-texto">
                         <div class="blog-div">
-                            The Verge
+                            <span class="tooltip">notícias, reviews e podcasts</span>
+                            <a href="https://www.theverge.com/" style="text-decoration: none; color: white; cursor: pointer;" target="_blank">The Verge</a>
                         </div>
                     </div>
                 </div>
@@ -284,7 +292,8 @@
                     </div>
                     <div class="blog-texto">
                         <div class="blog-div">
-                            android central
+                            <span class="tooltip">notícias e reviews do mundo mobile</span>
+                            <a href="https://www.androidcentral.com/" style="text-decoration: none; color: white; cursor: pointer;" target="_blank">android central</a>
                         </div>
                     </div>
                 </div>
@@ -297,7 +306,8 @@
                     </div>
                     <div class="blog-texto">
                         <div class="blog-div">
-                            techtudo
+                            <span class="tooltip">tudo sobre tecnologia</span>
+                            <a href="http://www.techtudo.com.br/" style="text-decoration: none; color: white; cursor: pointer;" target="_blank">techtudo</a>
                         </div>
                     </div>
                 </div>
@@ -310,7 +320,8 @@
                     </div>
                     <div class="blog-texto">
                         <div class="blog-div">
-                            IT Business Edge
+                            <span class="tooltip">notícias, análises e tendências do mundo dos negócios</span>
+                            <a href="https://www.itbusinessedge.com/" style="text-decoration: none; color: white; cursor: pointer;" target="_blank">IT Business Edge</a>
                         </div>
                     </div>
                 </div>

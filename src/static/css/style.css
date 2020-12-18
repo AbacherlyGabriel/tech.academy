@@ -12,6 +12,7 @@ body {
     -ms-animation: fadein 3s ease-in; /* Internet Explorer */
     -o-animation: fadein 3s ease-in; /* Opera < 12.1 */
     animation: fadein 3s ease-in;
+    transition: 0.4s;
 }
 
 @keyframes fadein {
@@ -139,6 +140,7 @@ header {
     color: #154250;
 }
 
+/*
 .signin {
     color: white;
     margin: 20px;
@@ -146,8 +148,26 @@ header {
     transition: 0.6s;
     overflow: hidden;
 }
+*/
+
+.signin {
+    background-color: transparent;
+    border: 1px solid;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.6s;
+    overflow: hidden;
+}
 
 .signin:hover {
+    border: none;
+    background-color: white;
     color: #154250;
 }
 
@@ -160,7 +180,7 @@ header {
     text-align: center;
     text-decoration: none;
     border-radius: 40px;
-    width: 80px;
+    width: 120px;
     cursor: pointer;
 }
 
@@ -283,6 +303,7 @@ header {
     cursor: pointer;
     transition: 0.6s;
     overflow: hidden;
+    width: 120px;
 }
 
 .saiba-mais:hover {
@@ -313,6 +334,7 @@ header {
     cursor: pointer;
     transition: 0.6s;
     overflow: hidden;
+    width: 120px;
 }
 
 .cadastre-se:hover {
@@ -566,6 +588,30 @@ circle {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    position: relative;
+}
+
+.blog-div .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #154250;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+  
+.blog-div:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 .blog-div img {
