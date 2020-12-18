@@ -16,7 +16,12 @@
 
     <title>tech.academy | home</title>
 </head>
-<body>
+<body onload="myFunction()">
+
+    <div id="loader"></div>
+
+    <div class="fadeIn">
+
     <header>
         <div class="container navbar">
             <div class="logo">
@@ -336,6 +341,21 @@
     <footer class="footer">
         <div class="copyright">copyright &copy tech.academy, inc. all rights reserved</div>
     </footer>
+
+    </div>
+
+    <script>
+        var myVar;
+        
+        function myFunction() {
+          myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          //document.getElementById("test").style.filter = "opacity(0)";
+        }
+    </script>
 
 </body>
 </html>
