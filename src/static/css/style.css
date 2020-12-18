@@ -96,6 +96,16 @@ header {
     cursor: pointer;
 }
 
+.btn-effect {
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+.btn-effect:hover {
+    background-color: #EDEDED;
+    color: #154250
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -103,6 +113,13 @@ header {
 
 .logo-img {
     width: 30px;
+    height: 100%;
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+.logo-img:hover {
+    fill: #154250;
 }
 
 .logo-texto {
@@ -114,12 +131,24 @@ header {
 .logo-texto a {
     color: white;
     text-decoration: none;
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+.logo-texto a:hover {
+    color: #154250;
 }
 
 .signin {
     color: white;
     margin: 20px;
     text-decoration: none;
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+.signin:hover {
+    color: #154250;
 }
 
 .signup {
@@ -252,6 +281,13 @@ header {
     text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+.saiba-mais:hover {
+    background-color: #EDEDED;
+    color: #154250
 }
 
 .para-voce {
@@ -275,6 +311,13 @@ header {
     text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+.cadastre-se:hover {
+    background-color: #EDEDED;
+    color: #154250
 }
 
 .container-logado {
@@ -464,6 +507,11 @@ circle {
     display: grid;
     grid-template-rows: 3fr 1fr;
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    transition: 0.2s;
+}
+
+.curso-destaque:hover {
+    transform: scale(1.05);
 }
 
 .curso-destaque-img {
@@ -496,6 +544,11 @@ circle {
     display: grid;
     grid-template-rows: 3fr 1fr;
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    transition: 0.2s;
+}
+
+.blog:hover {
+    transform: scale(1.05);
 }
 
 .blog-img {
