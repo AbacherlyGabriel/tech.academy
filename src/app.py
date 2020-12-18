@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, session, flash, redirect, render_template, request
+from flask import Flask, session, flash, redirect, render_template, request, send_from_directory
 from dao import UserDao
 
 app = Flask(__name__)
@@ -79,3 +79,9 @@ def avaliacoes():
 @app.route('/forum')
 def forum():
     return render_template('forum.html')
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
