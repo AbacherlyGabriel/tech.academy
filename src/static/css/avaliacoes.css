@@ -33,6 +33,12 @@
     border: solid;
     border-radius: 20px;
     border-color: #154250;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.foruns-container:hover {
+    background-color: #7d31313d;
 }
 
 .foruns-container a {

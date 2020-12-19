@@ -69,6 +69,49 @@ header {
     margin-right: 10px;
 }
 
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #154250;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+  
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.effect {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s;
+}
+  
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
 .resultados-cursos {
     display: grid;
     grid-template-columns: 1.5fr 3.5fr 1fr;
@@ -144,8 +187,12 @@ header {
     text-align: center;
     text-decoration: none;
     border-radius: 40px;
-    cursor: pointer;
+    cursor: default;
     width: 100px;
+}
+
+.btn-effect:hover {
+    border: 1px solid #154250;
 }
 
 .paginacao {

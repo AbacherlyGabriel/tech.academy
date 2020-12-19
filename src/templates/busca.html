@@ -15,7 +15,7 @@
     
     <title>tech.academy | resultados</title>
 </head>
-<body>
+<body onload="">
     <header>
         <div class="container navbar">
             <div class="logo">
@@ -113,38 +113,40 @@
         </section>
         <!-- Fim: Header de Resultados -->
 
+        <div class="effect">
+
         <!-- Resultados: Cursos -->
         {% for curso in results %}
-            <section class="resultados-cursos">
-                <div class="item resultado-img">
-                    <img class="img-curso" src="{{ url_for('static', filename=curso['imgPath']) }}"
-                    style="width: 200px; height: 200px; display: block; background-color: white;">
-                </div>
+        <section class="resultados-cursos">
+            <div class="item resultado-img">
+                <img class="img-curso" src="{{ url_for('static', filename=curso['imgPath']) }}"
+                style="width: 200px; height: 200px; display: block; background-color: white;">
+            </div>
 
-                <div class="item resultado-textos">
-                    <h1 class="resultado-desc">{{ curso['nome_curso']|lower }}</h1>
-                    <h2 class="resultado-desc">{{ curso['descricao']|lower }}</h2>
-                    <h2 class="resultado-desc oferecimento">{{ curso['oferecimento']|lower }}</h2>
-                    <h2 class="resultado-desc resultado-rating">
-                        {{ curso['avaliacao'] }}
-                        {% for i in range(curso['avaliacao']) %}
-                            <i class="fas fa-star"></i>
-                        {% endfor %}
-                        {% for i in range(5 - curso['avaliacao']) %}
-                            <i class="far fa-star"></i>
-                        {% endfor %}
-                        (99)
-                    </h2>
-                </div>
+            <div class="item resultado-textos">
+                <a href="avaliacoes" style="text-decoration: none; color: #154250;"><h1 class="resultado-desc">{{ curso['nome_curso']|lower }}</h1></a>
+                <h2 class="resultado-desc">{{ curso['descricao']|lower }}</h2>
+                <h2 class="resultado-desc oferecimento">{{ curso['oferecimento']|lower }}</h2>
+                <h2 class="resultado-desc resultado-rating">
+                    {{ curso['avaliacao'] }}
+                    {% for i in range(curso['avaliacao']) %}
+                        <i class="fas fa-star"></i>
+                    {% endfor %}
+                    {% for i in range(5 - curso['avaliacao']) %}
+                        <i class="far fa-star"></i>
+                    {% endfor %}
+                    (99)
+                </h2>
+            </div>
 
-                <div class="resultado-links">
-                    <div class="resultado-botoes">
-                        <button class="btn resultado-link">saiba mais</button>
-                        <button class="btn resultado-link" onclick="location.href='avaliacoes'">avaliações</button>
-                        <button class="btn resultado-preco">R$ {{ curso['valor'] }}</button>
-                    </div>
+            <div class="resultado-links">
+                <div class="resultado-botoes">
+                    <button class="btn resultado-link btn-effect">saiba mais</button>
+                    <button class="btn resultado-link btn-effect" onclick="location.href='avaliacoes'">avaliações</button>
+                    <button class="btn resultado-preco">R$ {{ curso['valor'] }}</button>
                 </div>
-            </section>
+            </div>
+        </section>
         {% endfor %}
 
         <!-- Fim: Resultados de Cursos -->
@@ -156,9 +158,24 @@
         </section>
     </div>
 
+    </div>
+
     <footer class="footer">
         <div class="copyright">copyright &copy tech.academy, inc. all rights reserved</div>
     </footer>
+
+    <script>
+        var myVar;
+        
+        function myFunction() {
+          myVar = setTimeout(showPage, 500);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          //document.getElementById("test").style.filter = "opacity(0)";
+        }
+    </script>
 
 </body>
 </html>

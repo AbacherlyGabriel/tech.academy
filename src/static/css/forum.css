@@ -16,6 +16,12 @@
     border: solid;
     border-radius: 20px;
     border-color: #154250;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.topicos-container:hover {
+    background-color: #7d31313d;
 }
 
 .topicos-avatar {
@@ -79,6 +85,12 @@
     border: none;
     background: none;
     cursor: pointer;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.topicos-add:hover {
+    transform: scale(1.2);
 }
 
 .modal-conteudo h1 {
