@@ -27,8 +27,9 @@
 
             {% if session.get('usuario_logado') == None %}
             <div class="sign">
-                <a class="signin" href="login">sign in</a>
-                <button class="signup" onclick="location.href='register'" type="button">sign up</button>
+                <!-- <a class="signin" href="login">sign in</a> -->
+                <button class="signin" onclick="location.href='login'" type="button">entrar</button>
+                <button class="signup btn-effect" onclick="location.href='register'" type="button">cadastre-se</button>
             </div>
 
             {% else %}

@@ -21,7 +21,18 @@ header {
 }
 
 .signin {
-    color:  #154250;
+    color: #154250;
+    background-color: white;
+}
+
+.signin:hover {
+    border: none;
+    background-color: #154250;
+    color: white;
+}
+
+.btn-effect {
+    border: 1px solid #154250;
 }
 
 .usuario-alertas i {
