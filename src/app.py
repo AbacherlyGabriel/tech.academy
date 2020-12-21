@@ -1,12 +1,13 @@
 import os
 
 from flask import Flask, session, flash, redirect, render_template, request, send_from_directory
-from dao import UserDao
+from dao import UserDao, SearchDao
 
 app = Flask(__name__)
 secret = os.environ.get('SESSIONKEY')
 app.secret_key = secret
 user = UserDao()
+search = SearchDao()
 
 
 @app.route('/')
@@ -59,7 +60,7 @@ def criar():
 
 @app.route('/buscar', methods=['POST'])
 def buscar():
-    docs = user.query_by_description(request.form['description'])
+    docs = search.query_by_description(request.form['description'])
     results = []
     for curso in docs:
         results.append(curso)

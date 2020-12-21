@@ -41,6 +41,9 @@ class UserDao:
             self.message = "Email já cadastrado"
             return False
 
+
+class SearchDao:
+
     def query_by_description(self, description):
         query = {"descricao": {"$regex": f"{description}", "$options": 'i'}}
         docs = self.teste_col.find(query)
