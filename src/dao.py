@@ -13,8 +13,6 @@ class UserDao:
         self.users_db = client['users']
         self.login_col = self.users_db['login']
         self.message = ''
-        self.cursos_db = client['cursos']
-        self.teste_col = self.cursos_db['teste']
 
     def read(self, email, password):
         query = {"_id": email, "pass": password}
@@ -43,6 +41,10 @@ class UserDao:
 
 
 class SearchDao:
+
+    def __init__(self):
+        self.cursos_db = client['cursos']
+        self.teste_col = self.cursos_db['teste']
 
     def query_by_description(self, description):
         query = {"descricao": {"$regex": f"{description}", "$options": 'i'}}
